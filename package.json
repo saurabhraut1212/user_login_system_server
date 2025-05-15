@@ -12,7 +12,8 @@
     "build:watch": "tsc --watch",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write .",
-    "prepare": "husky install",
+    "prepare": "husky",
+    "prepare-husky": "npx husky init; echo \"# npm test\nnpx lint-staged\" > .husky/pre-commit; echo \"npm build\" > .husky/pre-push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
